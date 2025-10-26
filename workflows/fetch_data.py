@@ -43,6 +43,6 @@ sheet = "Sheet1"                     # Replace with your sheet name
 if len(sys.argv) > 2 and sys.argv[2].strip():
     desired_row_index = int(sys.argv[2])
 else:
-    desired_row_index = 2     # Replace with the 0-based index of the row you want to print
+    desired_row_index = 1     # Replace with the 0-based index of the row you want to print
 
 print_specific_excel_row(excel_file, sheet, desired_row_index)
