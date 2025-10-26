@@ -25,7 +25,7 @@ def print_specific_excel_row(file_path, sheet_name, row_index):
             print(f"Error: Row index {row_index} is out of bounds for the DataFrame.")
             return
 
-        specific_row = df.iloc[row_index]
+        specific_row = df.iloc[row_index - 1]
         print(f"Row at index {row_index}:")
         print(specific_row)
 
