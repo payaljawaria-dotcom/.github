@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
     inputs:
       row_number:
-        description:"Enter the Excel row nuber to fetch"
-        default:"2"
-        required:true
+        description: "Enter the Excel row nuber to fetch"
+        default: "2"
+        required: true
 
 jobs:
   fetch-data:
