@@ -5,8 +5,8 @@ on:
     inputs:
       row_number:
         description: "Enter the Excel row nuber to fetch"
-        default: "2"
         required: true
+        default: "2"
 
 jobs:
   fetch-data:
@@ -28,4 +28,4 @@ jobs:
 
       - name: Run Python script
         run: |
-          python workflows/fetch_data.py ${{github.event.inputs.row_number}}
+          python workflows/fetch_data.py ${{ github.event.inputs.row_number }}
