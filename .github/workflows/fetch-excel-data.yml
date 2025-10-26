@@ -1,6 +1,12 @@
 name: Fetch Excel Data
 
-on: [workflow_dispatch, push]
+on:
+  workflow_dispatch:
+    inputs:
+      row_number:
+        description:"Enter the Excel row nuber to fetch"
+        default:"2"
+        required:true
 
 jobs:
   fetch-data:
@@ -22,4 +28,4 @@ jobs:
 
       - name: Run Python script
         run: |
-          python workflows/fetch_data.py
+          python workflows/fetch_data.py ${{github.event.inputs.row_number}}
