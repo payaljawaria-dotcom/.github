@@ -35,8 +35,14 @@ def print_specific_excel_row(file_path, sheet_name, row_index):
         print(f"An error occurred: {e}")
 
 # Example usage:
-excel_file = sys.argv[1] # Replace with your Excel file name
+if len(sys.argv) > 1 and sys.argv[1].strip():
+    excel_file = sys.argv[1]
+else:
+    excel_file = "Int B.Tech_M.tech.xlsx"
 sheet = "Sheet1"                     # Replace with your sheet name
-desired_row_index = int(sys.argv[2])                # Replace with the 0-based index of the row you want to print
+if len(sys.argv) > 2 and sys.argv[2].strip():
+    desired_row_index = int(sys.argv[2])
+else:
+    desired_row_index = 2     # Replace with the 0-based index of the row you want to print
 
 print_specific_excel_row(excel_file, sheet, desired_row_index)
