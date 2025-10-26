@@ -6,7 +6,7 @@ on:
       filename:
         description : "Enter the Excel File Name (with extension)"
         required: true
-        default: "Int B.Tech_M.tech.xslx" 
+        default: "Int B.Tech_M.tech.xlsx" 
       row_number:
         description: "Enter the Excel row nuber to fetch"
         required: true
