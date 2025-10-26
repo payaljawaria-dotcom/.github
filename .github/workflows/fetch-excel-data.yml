@@ -22,4 +22,4 @@ jobs:
 
       - name: Run Python script
         run: |
-          python workflows/fetch_data.py
+          python fetch_data.py
